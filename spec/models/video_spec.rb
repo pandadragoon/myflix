@@ -35,4 +35,10 @@ describe "search_by_title" do
     back_to_future = Video.create(title: 'back to the future', description: 'time travel')
     expect(Video.search_by_title("urama")).to eq([futurama, futurama3, futurama2])
   end
+
+  it "returns an empty array when search is an empty string" do
+    futurama = Video.create(title: 'futurama', description: 'space')
+    back_to_future = Video.create(title:'back to the future', description: 'time')
+    expect(Video.search_by_title("")).to eq([])
+  end
 end
