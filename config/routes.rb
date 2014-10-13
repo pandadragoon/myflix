@@ -8,5 +8,10 @@ Myflix::Application.routes.draw do
     end
   end
   resources :categories, only: [:show]
+  get 'sign_in', to: 'sessions#new'
+  get 'sign_out', to: 'sessions#destroy'
+  get 'register', to: 'users#new'
+  resources :users, only: [:create]
+  resources :sessions, only: [:create]
 
 end
