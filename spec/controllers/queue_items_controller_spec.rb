@@ -20,7 +20,7 @@ describe QueueItemsController do
     it "redirects to the my queue page" do
       session[:user_id] = Fabricate(:user).id
       video = Fabricate(:video)
-      post :create, video_id: video.id
+      post :create, video_id: Fabricate(:video).id
       expect(response).to redirect_to my_queue_path
     end
     it "creates a queue item" do
@@ -65,5 +65,15 @@ describe QueueItemsController do
       expect(response).to redirect_to sign_in_path
     end
   end
-
+  describe"DELETE destroy" do
+    it "redirects to the my queue page" do
+      session[:user_id] = Fabricate(:user).id
+      queue_item = Fabricate(:queue_item)
+      delete :destroy, id: queue_item.id
+      expect(response).to redirect_to my_queue_path
+    end
+    it "deletes the queue item"
+    it "does not delete the queue item if not owned by current user"
+    it "redirects to sign in page for unauthenticated users"
+  end
 end
