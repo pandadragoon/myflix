@@ -2,6 +2,7 @@ Myflix::Application.routes.draw do
   root to: 'pages#front'
   get 'ui(/:action)', controller: 'ui'
   get 'home', to: 'videos#index'
+  get 'my_queue', to: 'queue_items#index'
   resources :videos, only: [:show] do
     collection do
       get 'search', to: 'videos#search'
@@ -14,4 +15,5 @@ Myflix::Application.routes.draw do
   get 'register', to: 'users#new'
   resources :users, only: [:create]
   resources :sessions, only: [:create]
+  resources :queue_items, only: [:create]
 end
