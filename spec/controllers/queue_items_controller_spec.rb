@@ -72,8 +72,25 @@ describe QueueItemsController do
       delete :destroy, id: queue_item.id
       expect(response).to redirect_to my_queue_path
     end
-    it "deletes the queue item"
-    it "does not delete the queue item if not owned by current user"
-    it "redirects to sign in page for unauthenticated users"
+    it "deletes the queue item" do
+      bob = Fabricate(:user)
+      session[:user_id] = bob.id
+      queue_item = Fabricate(:queue_item, user: bob)
+      delete :destroy, id: queue_item.id
+      expect(QueueItem.count).to eq(0)
+    end
+    it "does not delete the queue item if not owned by current user" do
+      bob = Fabricate(:user)
+      alice = Fabricate(:user)
+      session[:user_id] = alice.id
+      queue_item = Fabricate(:queue_item, user: bob)
+      delete :destroy, id: queue_item.id
+      expect(QueueItem.count).to eq(1)
+    end
+    it "redirects to sign in page for unauthenticated users" do
+      queue_item = Fabricate(:queue_item)
+      delete :destroy, id: queue_item.id
+      expect(response).to redirect_to sign_in_path
+    end
   end
 end
