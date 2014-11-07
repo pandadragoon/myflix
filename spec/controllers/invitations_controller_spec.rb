@@ -42,6 +42,7 @@ describe InvitationsController do
     end
 
     context "with invalid input" do
+      after {ActionMailer::Base.deliveries.clear}
       it "sets @invitation" do
         set_current_user
         post :create, invitation: {recipient_email: "bob@bob.com", message: "Hey join Myflix!"}

@@ -5,3 +5,9 @@
      expect(response).to redirect_to sign_in_path
    end
  end
+
+ shared_examples "tokenable" do
+   it 'generates a token' do
+     expect(object.token).to be_present
+   end
+ end
