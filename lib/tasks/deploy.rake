@@ -13,7 +13,6 @@ namespace :deploy do
    deployment = Paratrooper::Deploy.new("glacial-dusk-4197") do |deploy|
      deploy.tag              = 'production',
      deploy.match_tag        = 'staging',
-     deploy.maintenance_mode = !ENV['NO_MAINTENANCE']
    end
 
    deployment.deploy
