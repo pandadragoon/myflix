@@ -13,6 +13,7 @@ gem 'bcrypt-ruby'
 gem 'sidekiq'
 gem 'unicorn'
 gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
+gem 'paratrooper'
 
 group :development do
   gem 'sqlite3'
