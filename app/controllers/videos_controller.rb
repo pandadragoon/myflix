@@ -6,7 +6,7 @@ class VideosController < ApplicationController
   end
   def show
     @video = Video.find(params[:id])
-    @reviews = @video.reviews.all 
+    @reviews = @video.reviews.all
   end
   def search
     @videos = Video.search_by_title(params[:search])
@@ -14,7 +14,7 @@ class VideosController < ApplicationController
   private
 
   def video_params
-    params.require(:video).permit(:title, :description, :small_cover_url, :large_cover_url)
+    params.require(:video).permit(:title, :description, :small_cover, :large_cover)
   end
 
 end
