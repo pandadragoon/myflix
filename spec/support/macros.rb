@@ -19,5 +19,5 @@ def click_on_home_page_video(video)
 end
 
 def sign_out
-  click_link "Sign Out"
+  visit sign_out_path
 end
