@@ -8,7 +8,6 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.valid?
-      Stripe.api_key = ENV['stripe_api_key']
       charge = StripeWrapper::Charge.create(
         :amount => 999,
         :card => params[:stripeToken],
