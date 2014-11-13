@@ -5,7 +5,7 @@ class VideosController < ApplicationController
     @categories = Category.all
   end
   def show
-    @video = Video.find(params[:id])
+    @video = VideoDecorator.decorate(Video.find(params[:id]))
     @reviews = @video.reviews.all
   end
   def search
