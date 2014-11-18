@@ -11,17 +11,17 @@ Category.create(name: 'Comedies')
 Category.create(name: 'Animation')
 
 
-Video.create(title: 'Family Guy', description: 'A guy and his family.', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/family_guy.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
-Video.create(title: 'Futurama', description: 'A guy in the future.', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/futurama.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
-monk = Video.create(title: 'Monk', description: 'A guy named Monk.', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
-Video.create(title: 'South Park', description: 'Some kids in South Park', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/south_park.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
+Video.create(title: 'Family Guy', description: 'A guy and his family.', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/family_guy.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
+Video.create(title: 'Futurama', description: 'A guy in the future.', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/futurama.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
+monk = Video.create(title: 'Monk', description: 'A guy named Monk.', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
+Video.create(title: 'South Park', description: 'Some kids in South Park', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/south_park.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 1)
 
-Video.create(title: 'Futurama', description: 'A guy in the future.', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/futurama.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 2)
-Video.create(title: 'Monk', description: 'A guy named Monk.', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 2)
-Video.create(title: 'South Park', description: 'Some kids in South Park', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/south_park.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 2)
+Video.create(title: 'Futurama', description: 'A guy in the future.', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/futurama.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 2)
+Video.create(title: 'Monk', description: 'A guy named Monk.', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 2)
+Video.create(title: 'South Park', description: 'Some kids in South Park', _small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/south_park.jpg', _large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 2)
 
-Video.create(title: 'Monk', description: 'A guy named Monk.', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 3)
-Video.create(title: 'South Park', description: 'Some kids in South Park', remote_small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/south_park.jpg', remote_large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 3)
+Video.create(title: 'Monk', description: 'A guy named Monk.', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 3)
+Video.create(title: 'South Park', description: 'Some kids in South Park', small_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/south_park.jpg', large_cover: 'https://myflixjedwards.s3.amazonaws.com/uploads/monk_large.jpg', category_id: 3)
 
 panda = User.create(email: 'panda@panda.com', full_name: 'Panda Edwards', password: 'password')
 
